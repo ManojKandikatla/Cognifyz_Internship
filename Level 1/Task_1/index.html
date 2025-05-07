@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Task1</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: white;
+      }
+      .logo {
+        font-size: 1.8rem;
+        margin: 0;
+      }
+      .img {
+        padding: 0 720px;
+      }
+
+      .navmenu {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 10px;
+      }
+
+      .navitem {
+        background: #00c9a7;
+        border-radius: 50px;
+        padding: 10px 20px;
+        transition: all 0.2s ease;
+      }
+
+      .navitem:hover {
+        background: #009677;
+        transform: translateY(-2px);
+      }
+
+      .navlink {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      section {
+        padding: 80px 20px;
+        min-height: 100vh;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      #sec1 {
+        background: #f57a16;
+        color: white;
+      }
+
+      #sec2 {
+        background: white;
+        color: black;
+      }
+
+      #sec3 {
+        background: #ee6a59;
+        color: black;
+      }
+
+      form {
+        background: white;
+        border-radius: 10px;
+        padding: 30px;
+        width: 90%;
+        max-width: 400px;
+        margin: 0 auto;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        background: #00c9a7;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      input[type="submit"]:hover {
+        background: #009677;
+      }
+
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .navmenu {
+          flex-direction: column;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">Simply WebPage</h1>
+      <ul class="navmenu">
+        <li class="navitem"><a href="#sec1" class="navlink">Home</a></li>
+        <li class="navitem"><a href="#sec2" class="navlink">Content</a></li>
+        <li class="navitem"><a href="#sec3" class="navlink">Form</a></li>
+      </ul>
+    </header>
+
+    <section id="sec1">
+      <h1>Level 1<br />Task 1</h1>
+      <h2>Hi Everyone! 😎</h2>
+      <p>
+        Thanks to Cognifyz Technologies who gives me this opportunity to enhance
+        my learning in web development.
+      </p>
+      <p class="scroll">Scroll down</p>
+    </section>
+
+    <section id="sec2">
+      <img
+        src="https://images.unsplash.com/photo-1541963463532-d68292c34b19"
+        alt="Book"
+        width="400"
+        height="450"
+        class="img"
+      />
+      <h1>The form contains student queries.</h1>
+      <p>The data helps to solve problems</p>
+    </section>
+
+    <section id="sec3">
+      <h1>Contact Us</h1>
+      <form>
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" required /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" required /><br />
+
+        <label for="queries">Queries:</label><br />
+        <textarea id="queries" rows="5"></textarea><br />
+
+        <input type="submit" value="Send Message" />
+      </form>
+    </section>
+  </body>
+</html>
